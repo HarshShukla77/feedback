@@ -3,7 +3,7 @@
 // import { NextResponse } from 'next/server';
 
 // const openai = new OpenAI({
-//   apiKey: "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"
+//   apiKey: ""
 // });
 
 // export const runtime = 'edge';
