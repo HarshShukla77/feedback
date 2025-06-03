@@ -37,7 +37,6 @@
 // }
 
 import { NextResponse } from 'next/server';
-
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
@@ -45,7 +44,7 @@ export async function POST(req: Request) {
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer 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`,
+        "Authorization": `Bearer ${process.env.GROK_API}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
