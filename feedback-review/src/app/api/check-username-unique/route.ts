@@ -29,7 +29,7 @@ export async function GET(request:Request){
             return Response.json(
                 {
                     success:false,
-                    message:"invalid quesrty parameters"
+                    message:"invalid querty parameters"
                 },{
                     status:400
                 }
@@ -63,7 +63,7 @@ export async function GET(request:Request){
 
         return Response.json({
             success:false,
-            message:"errr checking usernma"
+            message:"errr checking username"
         },
     {
         status:500
