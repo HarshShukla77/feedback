@@ -170,7 +170,7 @@ const page = () => {
                                 </>
 
 
-                                : ('SignUp')
+                                : ('Sign up')
                         }</Button>
                     </form>
                 </Form>
