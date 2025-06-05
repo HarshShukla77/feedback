@@ -14,7 +14,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
-import Spin from "@/app/spinner/spin"
+import Spin from "@/app/spinner/Spin"
 
 const page = () => {
 

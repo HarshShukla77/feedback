@@ -14,15 +14,11 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
-import Spin from "@/app/spinner/spin"
+import Spin from "@/app/spinner/Spin"
 import { signInSchema } from "@/schemas/signInSchema.ts"
 import { signIn } from "next-auth/react"
 
 const page = () => {
-
-
-
-   
     const router = useRouter();
     //  zod implementation
 
@@ -33,10 +29,6 @@ const page = () => {
             password: ''
         }
     })
-
-
-
-
 
     const onSubmit = async (data: z.infer<typeof signInSchema>) => {
         const result = await signIn('credentials',{
