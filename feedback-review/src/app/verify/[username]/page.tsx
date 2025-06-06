@@ -36,7 +36,7 @@ const page = () => {
                 return
             }
             toast.success("Succefully verified code ")
-            router.replace('sign-in')
+            router.replace('/sign-in')
         } catch (err) {
             console.log("Error in signup of user", err);
             const axiosError = err as AxiosError<ApiResponse>
@@ -70,7 +70,7 @@ const page = () => {
                                 </FormItem>
                             )}
                         />
-                        <Button type="submit">Submit</Button>
+                        <Button className='cursor-pointer' type="submit">Submit</Button>
                     </form>
                 </Form>
             </div>

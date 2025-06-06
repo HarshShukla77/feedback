@@ -9,6 +9,8 @@ export async function POST(request:Request){
     const {username,content} = await request.json()
 
     try{
+
+        console.log("hi baby")
        const user = await UserModel.findOne({username})
        if(!user){
          return Response.json({
@@ -22,7 +24,8 @@ export async function POST(request:Request){
 
     //    is User acceprting the messages
 
-    if(!user.isAcceptingMessage){
+    if(!user.isAcceptingMessages){
+            console.log("yaha pahucha kya mai ")
              return Response.json({
                 success: false,
                 message: "user is not accepting the messages"
@@ -42,7 +45,7 @@ export async function POST(request:Request){
                 message: "message send succesfully"
             },
                 {
-                    status:401
+                    status:200
                 })
 
 

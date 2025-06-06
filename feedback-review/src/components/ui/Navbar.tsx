@@ -16,16 +16,24 @@ const Navbar = () => {
             <a className='text-xl font-bold mb-4 md:mb-0' href="#">Mystry Message</a>
             {session ? (
                 <>
+               
                 <span className='mr-4 ' >Welcome , {user?.username || user?.email}</span>
-                <Button  className='w-full md:w-auto' onClick={()=>signOut()} >Logout</Button>
+                 <div  className='flex gap-6' >
+                <Button  className='w-full md:w-auto cursor-pointer' onClick={()=>signOut()} >Logout</Button>
+               <Link href={'/dashboard'} > <Button  className='w-full md:w-auto cursor-pointer'  >DashBoard</Button>
+               </Link>
+              </div>
                 </>
             ): (
                 <>
-                 
+                 <div className='flex gap-6' >
                  <Link href={'/sign-in'} >
                  <Button className='w-full md:w-auto cursor-pointer  ' >Login  </Button>
                  </Link>
-                
+
+                 <Link href={'/sign-up'} className='w-full md:w-auto cursor-pointer  '  >
+                  <Button className='w-full md:w-auto cursor-pointer  ' >Sign in  </Button></Link>
+                </div>
                 </>
             )}
         </div>

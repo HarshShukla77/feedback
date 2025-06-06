@@ -27,7 +27,7 @@ import { toast } from "react-toastify"
 import axios from "axios"
 import { ApiResponse } from "@/types/ApiResponse"
 import { any } from "zod"
-
+import { MdOutlineDelete } from "react-icons/md";
 type MessagCardProps ={
     message:Message;
     onMessageDelete:(messageId:string)=>void
@@ -35,7 +35,7 @@ type MessagCardProps ={
 
 
 const MessageCard = ({message,onMessageDelete} :MessagCardProps) => {
-
+    
     const handleDeleteConfirm = async ()=>{
        const response = await axios.delete<ApiResponse>(`/api/delete-message/${message._id}`)
        if(!response){
@@ -48,10 +48,10 @@ const MessageCard = ({message,onMessageDelete} :MessagCardProps) => {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <AlertDialog>
-                    <AlertDialogTrigger asChild>
-                        <Button variant="destructive">X  </Button>
+                <CardTitle>{message.content}</CardTitle>
+                <AlertDialog >
+                    <AlertDialogTrigger className="mt-5 " asChild>
+                    <MdOutlineDelete/> 
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                         <AlertDialogHeader>
@@ -67,8 +67,8 @@ const MessageCard = ({message,onMessageDelete} :MessagCardProps) => {
                         </AlertDialogFooter>
                     </AlertDialogContent>
                 </AlertDialog>
-                <CardDescription>Card Description</CardDescription>
-                <CardAction>Card Action</CardAction>
+                
+              
             </CardHeader>
 
 
