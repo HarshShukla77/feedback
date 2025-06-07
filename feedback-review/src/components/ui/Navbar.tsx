@@ -32,7 +32,7 @@ const Navbar = () => {
                  </Link>
 
                  <Link href={'/sign-up'} className='w-full md:w-auto cursor-pointer  '  >
-                  <Button className='w-full md:w-auto cursor-pointer  ' >Sign in  </Button></Link>
+                  <Button className='w-full md:w-auto cursor-pointer  ' >Sign up  </Button></Link>
                 </div>
                 </>
             )}
